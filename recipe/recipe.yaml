@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: mypy-boto3-sts
-  version: "1.42.3"
+  version: 1.42.91
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/mypy_boto3_sts-${{ version }}.tar.gz
-  sha256: 3857c5ba3f3a5c0417edc47f5ad4e45891e3babc32d56c6b27c5d4167f9f5ba7
+  sha256: f22da0a91c193441924aa5e24c574abe7ca6cb2131a90caeb74256fa14a06878
 
 build:
   number: 0
@@ -26,10 +26,8 @@ requirements:
     - python ${{ python_min }}.*
     - setuptools
   run:
-    - boto3
     - python >=${{ python_min }}
     - typing_extensions
-
 tests:
   - python:
       imports:

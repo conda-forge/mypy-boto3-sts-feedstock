@@ -7,7 +7,7 @@ Home: https://github.com/youtype/mypy_boto3_builder
 
 Package license: MIT
 
-Summary: Type annotations for boto3 STS 1.43.0 service generated with mypy-boto3-builder
+Summary: Type annotations for boto3 STS 1.43.94 service generated with mypy-boto3-builder
 
 Development: https://github.com/youtype/mypy_boto3_builder
 
@@ -18,7 +18,9 @@ Current build status
 <table><tr>
     <td>All platforms:</td>
     <td>
-      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
+      <a href="https://github.com/conda-forge/mypy-boto3-sts-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/mypy-boto3-sts-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
     </td>
   </tr>
 </table>
@@ -40,31 +42,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `mypy-boto3-sts` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install mypy-boto3-sts
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install mypy-boto3-sts
 ```
 
-It is possible to list all of the versions of `mypy-boto3-sts` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add mypy-boto3-sts
+# for installing globally
+pixi global install mypy-boto3-sts
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `mypy-boto3-sts` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search mypy-boto3-sts --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search mypy-boto3-sts --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search mypy-boto3-sts --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -76,6 +120,8 @@ mamba repoquery whoneeds mypy-boto3-sts --channel conda-forge
 # List dependencies of `mypy-boto3-sts`:
 mamba repoquery depends mypy-boto3-sts --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge

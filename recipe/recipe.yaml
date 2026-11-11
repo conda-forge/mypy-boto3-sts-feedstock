@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: mypy-boto3-sts
-  version: 1.43.94
+  version: 1.44.0
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/mypy_boto3_sts-${{ version }}.tar.gz
-  sha256: d169e309deecf99cb8a897e34733571fcaa605447e29b9f6a8c32202c82690ce
+  sha256: 4828500c2c7b2c55c9c2aa5ad23997430db24a6c19a548e80a421e2d0533f67c
 
 build:
   number: 0
@@ -26,7 +26,6 @@ requirements:
     - python ${{ python_min }}.*
     - setuptools
   run:
-    - boto3
     - python >=${{ python_min }}
     - typing_extensions
 tests:
@@ -36,7 +35,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - "*"
+        - '*'
 
 about:
   summary: Type annotations for boto3 STS ${{ version }} service generated with mypy-boto3-builder
